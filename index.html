@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supratim Ghosh | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <section id="hero">
+    <div class="hero-content">
+      <h1><span class="highlight-name">Supratim Ghosh</span></h1>
+      <p>“Designing with data, building with purpose.”</p><br>
+      <a href="resume.pdf" class="btn" download>Download CV</a>
+    </div>
+    <div class="overlay"></div>
+    <video autoplay muted loop id="hero-bg">
+      <source src="hero-bg.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <section id="about" class="section-70">
+    <div class="card glass">
+      <h2>About Me</h2>
+      <p>I'm an aspiring Data Analyst and AIML Engineer with hands-on skills in Python, SQL, TensorFlow, and building interactive applications. Currently pursuing B.Tech in IT from Heritage Institute of Technology, Kolkata.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section-70">
+    <div class="card glass">
+      <h2>Skills</h2>
+      <ul class="skills-grid">
+        <li>Python</li><li>Java</li><li>SQL</li><li>NoSQL</li><li>JS</li><li>JSP</li><li>TensorFlow</li>
+        <li>Pandas</li><li>OpenCV</li><li>Git</li><li>Docker</li><li>AWS</li><li>HTML</li><li>CSS</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section-70">
+    <div class="card glass">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card" onclick="openModal('project1')">Food Ordering System</div>
+        <div class="project-card" onclick="openModal('project2')">Lost Person Recognition</div>
+        <div class="project-card" onclick="openModal('project3')">Indoor Navigation App</div>
+      </div>
+    </div>
+  
+    <!-- Modals -->
+    <div id="project1" class="modal">
+      <div class="modal-content glass">
+        <span class="close" onclick="closeModal('project1')">&times;</span>
+        <h2>Food Ordering System</h2>
+        <p>A full-stack website using HTML, CSS, JS, and JSP for online food ordering and delivery.</p>
+      </div>
+    </div>
+  
+    <div id="project2" class="modal">
+      <div class="modal-content glass">
+        <span class="close" onclick="closeModal('project2')">&times;</span>
+        <h2>Lost Person Recognition System</h2>
+        <p>A machine learning-based system in progress, designed to identify missing individuals in large gatherings using facial recognition.</p>
+      </div>
+    </div>
+  
+    <div id="project3" class="modal">
+      <div class="modal-content glass">
+        <span class="close" onclick="closeModal('project3')">&times;</span>
+        <h2>Indoor Navigation App</h2>
+        <p>Prototype mobile app using React Native and Python backend to guide users within enclosed places like railway stations and airports using beacons and triangulation.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="contact">
+    <div class="card glass">
+      <h2>Contact Me</h2>
+      <p>Email: ghoshsupratim7@gmail.com</p>
+      <p>Phone: +91 7059453686</p>
+      <p>Location: Kolkata, India</p>
+      <p><a href="https://linkedin.com/in/supratim-ghosh-33852a161/" target="_blank">LinkedIn</a> | <a href="https://github.com/SupratimGhosh" target="_blank">GitHub</a></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

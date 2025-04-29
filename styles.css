@@ -1,0 +1,260 @@
+
+html {
+  scroll-padding-top: 100; /* Optional: adjust for fixed nav if needed */
+  overflow-x: hidden;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: white;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+
+section {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  padding: 2rem;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#hero-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+
+.card.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 70%;
+  text-align: center;
+}
+.card.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 70%;
+  height: 60vh; /* fills 60% of screen height */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card.glass h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card.glass p,
+.card.glass li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-grid li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.highlight-name {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 183, 255, 0.7), 0 0 20px rgba(0, 183, 255, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 183, 255, 1), 0 0 40px rgba(0, 183, 255, 0.9);
+  }
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid white;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(0, 183, 255, 0.2);
+  color: #00c6ff;
+  border-color: #00c6ff;
+}
+
+
+@media (max-width: 600px) {
+  .highlight-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem; /* Increased font size */
+  min-width: 200px;
+  max-width: 300px;
+}
+
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap; /* allows responsive wrapping */
+  text-align: left; /* override inherited centering */
+}
+
+
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 60%;
+  text-align: center;
+  animation: fadeInCenter 0.5s ease-out forwards;
+}
+
+@keyframes fadeInCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.section-70 {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .card.glass {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .card.glass h2 {
+    font-size: 2rem;
+  }
+
+  .card.glass p,
+  .card.glass li {
+    font-size: 1rem;
+  }
+}
