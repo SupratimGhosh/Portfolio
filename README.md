@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website!
 
 ## 🌐 Live Site
-[https://supratimghosh.github.io](https://supratimghosh.github.io)
+[https://supratimghosh.netlify.app](https://supratimghosh.netlify.app)
 
 ## 📄 About
 This is a single-page portfolio website built with HTML, CSS, and JavaScript. It showcases:
@@ -20,8 +20,8 @@ This is a single-page portfolio website built with HTML, CSS, and JavaScript. It
 
 ## 🚀 How to Run Locally
 ```bash
-git clone https://github.com/SupratimGhosh/supratimghosh.github.io.git
-cd supratimghosh.github.io
+git clone https://github.com/SupratimGhosh/Portfolio.git
+cd Portfolio
 open index.html  # or just double-click it
 ```
 
