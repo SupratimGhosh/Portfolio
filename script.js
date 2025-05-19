@@ -151,7 +151,7 @@ particlesJS("particles-js", {
     color: { value: "#ffffff" },
     shape: { type: "circle" },
     opacity: { value: 0.2, random: true },
-    size: { value: 2, random: true },
+    size: { value: 2.5, random: true },
     line_linked: {
       enable: true,
       distance: 150,
@@ -161,7 +161,7 @@ particlesJS("particles-js", {
     },
     move: {
       enable: true,
-      speed: 0.6,
+      speed: 0.8,
       direction: "none",
       out_mode: "out"
     }

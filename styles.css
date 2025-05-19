@@ -13,9 +13,10 @@ body {
   overflow-y: scroll;
   scroll-behavior: smooth;
   height: 100vh;
-}
-body, a{
   cursor: url('cursor.png') 5 7, auto !important;
+}
+a, .close{
+  cursor: url('cursor2.png') 5 7, auto !important;
 }
 
 
