@@ -105,7 +105,7 @@ section {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 70%;
-  height: 60vh; /* fills 60% of screen height */
+  height: 70vh; /* fills 60% of screen height */
   text-align: center;
   display: flex;
   flex-direction: column;
