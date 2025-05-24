@@ -380,3 +380,71 @@ section {
   z-index: 0; /* behind other parallax layers */
   pointer-events: none;
 }
+
+
+/*new contact form*/
+/* ─── CONTACT ME TWO-COLUMN LAYOUT ─── */
+
+
+/* Centered title within the card */
+.card.glass .contact-title {
+  margin: 0 auto 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: inherit;          /* keeps existing white */
+}
+
+/* Wrapper for the two halves */
+.card.glass .contact-columns {
+  display: flex;
+  height: calc(100% - 4rem); /* subtract approximate title + margins */
+}
+
+/* Each column takes up 50% */
+.card.glass .contact-col {
+  flex: 1;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: inherit;
+}
+
+/* Left column: spacing between items */
+.card.glass .contact-left .contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.card.glass .contact-left .contact-link:hover {
+  color: #a8d8ff;
+}
+
+/* Social icons row under the links */
+.card.glass .contact-left .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card.glass .contact-left .social-icons a {
+  font-size: 1.8rem;
+  color: inherit;
+  transition: transform 0.2s, color 0.2s;
+}
+.card.glass .contact-left .social-icons a:hover {
+  transform: translateY(-3px);
+  color: #a8d8ff;
+}
+
+/* Right column: full-width map iframe */
+.card.glass .contact-right iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0.5rem;
+}
