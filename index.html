@@ -9,38 +9,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    fetch("https://ipapi.co/json/")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("Visitor Data:", data); // This works ✅
-  
-      return fetch("https://script.google.com/macros/s/AKfycby8NGDCekI2558b4TOjzADqgU6xDkbrAnZShZ757SD6Cxa5iIe4zay7uzGeK5O279B0/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          type: "visit",
-          ip: data.ip,
-          city: data.city,
-          region: data.region,
-          country: data.country_name,
-          page: window.location.pathname,
-          referrer: document.referrer,
-          userAgent: navigator.userAgent,
-        }),
-      });
-    })
-    .then((res) => res.text())
-    .then((text) => console.log("Logged:", text))
-    .catch((err) => console.error("Logging Error:", err));
-
-  });
-</script>
-
 </head>
 
 
