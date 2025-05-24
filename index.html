@@ -17,7 +17,7 @@
     .then((data) => {
       console.log("Visitor Data:", data); // This works ✅
   
-      return fetch("YOUR_GOOGLE_SCRIPT_URL", {
+      return fetch("https://script.google.com/macros/s/AKfycby8NGDCekI2558b4TOjzADqgU6xDkbrAnZShZ757SD6Cxa5iIe4zay7uzGeK5O279B0/exec", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
