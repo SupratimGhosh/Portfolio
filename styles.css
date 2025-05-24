@@ -448,3 +448,20 @@ section {
   border: 0;
   border-radius: 0.5rem;
 }
+
+/* ─── RESPONSIVE STACK FOR SMALL SCREENS ─── */
+@media (max-width: 768px) {
+  .card.glass .contact-columns {
+    flex-direction: column;
+    height: auto; /* let it grow naturally */
+  }
+
+  .card.glass .contact-col {
+    width: 100%;
+    padding: 1rem 0; /* reduce side padding on narrow screens */
+  }
+
+  .card.glass .contact-right iframe {
+    height: 250px; /* fixed height for the map when stacked */
+  }
+}
