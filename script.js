@@ -1,3 +1,25 @@
+fetch("https://ipapi.co/json/")
+  .then((res) => res.json())
+  .then((data) => {
+    return fetch("/.netlify/functions/log-visitor", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ip: data.ip,
+        city: data.city,
+        region: data.region,
+        country: data.country_name,
+        page: window.location.pathname,
+        referrer: document.referrer,
+        userAgent: navigator.userAgent,
+      }),
+    });
+  })
+  .then((res) => res.json())
+  .then((result) => console.log("Visitor logged:", result))
+  .catch((err) => console.error("Logging error:", err));
+
+
 
 function openModal(id) {
   document.getElementById(id).style.display = 'flex';
