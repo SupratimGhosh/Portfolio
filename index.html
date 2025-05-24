@@ -7,6 +7,7 @@
   <title>Supratim Ghosh | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,6 +16,11 @@
   referrerpolicy="no-referrer"/>
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Headland+One&display=swap" rel="stylesheet">
 </head>
 
 
@@ -31,7 +37,7 @@
   <section id="hero">
     <div class="hero-content">
       <h1><span class="highlight-name">Supratim Ghosh</span></h1>
-      <p>“Designing with data, building with purpose.”</p><br>
+      <p class="caveat-quote">“Designing with data, building with purpose.”</p><br>
       <a href="Supratim_Ghosh_resume.pdf" class="btn" download>Download CV</a>
     </div>
       
@@ -40,7 +46,7 @@
   <section id="about" class="section-70">
     <div class="card glass anim-up glow-enabled" data-tilt>
       <h2>About Me</h2>
-      <p>I'm an aspiring Data Analyst and AIML Engineer with hands-on skills in Python, SQL, TensorFlow, and building interactive applications. Currently pursuing B.Tech in IT from Heritage Institute of Technology, Kolkata.</p>
+      <p class="cormorant-about">I'm an aspiring Data Analyst and AIML Engineer with hands-on skills in Python, SQL, TensorFlow, and building interactive applications. Currently pursuing B.Tech in IT from Heritage Institute of Technology, Kolkata.</p>
     </div>
   </section>
 
@@ -48,11 +54,92 @@
     <div class="card glass anim-up glow-enabled" data-tilt>
       <h2>Skills</h2>
       <ul class="skills-grid">
-        <li>Python</li><li>Java</li><li>SQL</li><li>NoSQL</li><li>JS</li><li>JSP</li><li>TensorFlow</li>
-        <li>Pandas</li><li>OpenCV</li><li>Git</li><li>Docker</li><li>AWS</li><li>HTML</li><li>CSS</li>
+
+        <li class="skill-with-tooltip">
+          <i class="devicon-python-plain colored"></i>
+          <span class="tooltip">Python</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-java-plain colored"></i>
+          <span class="tooltip">Java</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-c-plain colored"></i>
+          <span class="tooltip">C</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-mysql-plain colored"></i>
+          <span class="tooltip">MySQL</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-oracle-original colored"></i>
+          <span class="tooltip">Oracle</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-sqlite-plain colored"></i>
+          <span class="tooltip">SQLite</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-mongodb-plain colored"></i>
+          <span class="tooltip">MongoDB</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-json-plain colored"></i>
+          <span class="tooltip">JSON</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-pytorch-original colored"></i>
+          <span class="tooltip">PyTorch</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-tensorflow-original colored"></i>
+          <span class="tooltip">TensorFlow</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-numpy-plain colored"></i>
+          <span class="tooltip">NumPy</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-pandas-plain colored"></i>
+          <span class="tooltip">Pandas</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-opencv-plain colored"></i>
+          <span class="tooltip">OpenCV</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-scikitlearn-plain colored"></i>
+          <span class="tooltip">Scikit-learn</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-git-plain colored"></i>
+          <span class="tooltip">Git</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-docker-plain colored"></i>
+          <span class="tooltip">Docker</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-amazonwebservices-plain colored"></i>
+          <span class="tooltip">AWS</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-html5-plain colored"></i>
+          <span class="tooltip">HTML5</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-css3-plain colored"></i>
+          <span class="tooltip">CSS3</span>
+        </li>
+        <li class="skill-with-tooltip">
+          <i class="devicon-javascript-plain colored"></i>
+          <span class="tooltip">JavaScript</span>
+        </li>
       </ul>
+      
     </div>
   </section>
+
 
   <section id="projects" class="section-70">
     <div class="card glass anim-up glow-enabled" data-tilt>
@@ -172,11 +259,12 @@
           href="https://mail.google.com/mail/?view=cm&fs=1&to=ghoshsupratim7@gmail.com"
           target="_blank"
           rel="noopener"
+          style="font-size: 1.5rem;"
         >
           <i class="fa-solid fa-envelope"></i>
           ghoshsupratim7@gmail.com
         </a>
-        <a class="contact-link" href="tel:+917059453686">
+        <a class="contact-link" href="tel:+917059453686" style="font-size: 1.5rem;">
           <i class="fa-solid fa-phone"></i>
           +91 7059453686
         </a>
@@ -187,6 +275,9 @@
           </a>
           <a href="https://github.com/SupratimGhosh" target="_blank">
             <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://wa.me/917059453686" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
           </a>
           <!-- …add more icons as needed… -->
         </div>

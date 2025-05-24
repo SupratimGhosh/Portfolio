@@ -1,32 +1,21 @@
-fetch("https://ipapi.co/json/")
-  .then((res) => res.json())
-  .then((data) => {
-    return fetch("/.netlify/functions/log-visitor", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ip: data.ip,
-        city: data.city,
-        region: data.region,
-        country: data.country_name,
-        page: window.location.pathname,
-        referrer: document.referrer,
-        userAgent: navigator.userAgent,
-      }),
-    });
-  })
-  .then((res) => res.json())
-  .then((result) => console.log("Visitor logged:", result))
-  .catch((err) => console.error("Logging error:", err));
-
-
 
 function openModal(id) {
   document.getElementById(id).style.display = 'flex';
 }
+// function closeModal(id) {
+//   document.getElementById(id).style.display = 'none';
+// }
 function closeModal(id) {
-  document.getElementById(id).style.display = 'none';
+  const modal = document.getElementById(id);
+  modal.classList.add('closing');
+
+  // Wait for CSS transition to finish (400ms here)
+  setTimeout(() => {
+    modal.classList.remove('closing');
+    modal.style.display = 'none';
+  }, 400);  // match this to your CSS transition duration
 }
+
 
 
 // Grab all the animated cards
@@ -159,8 +148,8 @@ animate();
 
 // Initialize tilt.js on elements with the data-tilt attribute
 VanillaTilt.init(document.querySelectorAll('.card.glass'), {
-  max: 3,            // Maximum tilt rotation (degrees)
-  speed: 500,         // Speed of tilt transition (in milliseconds)
+  max: 1.5,            // Maximum tilt rotation (degrees)
+  speed: 2000,         // Speed of tilt transition (in milliseconds)
   glare: false,        // Enable glare effect (shine effect on the card)
   "max-glare": 0.05   // Maximum glare intensity
 });
