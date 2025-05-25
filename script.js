@@ -1,4 +1,3 @@
-//fetch ip details to detect visitors
 fetch("https://ipapi.co/json/")
   .then((res) => res.json())
   .then((data) => {
@@ -214,3 +213,63 @@ particlesJS("particles-js", {
 });
 
 
+
+
+// new function to show popup for skills
+function showSkillPopup(skillName, proficiencyPercent) {
+  const popup = document.getElementById('skill-popup');
+  const skillNameEl = document.getElementById('popup-skill-name');
+  const progressFill = document.getElementById('popup-progress-fill');
+  const skillLevelEl = document.getElementById('popup-skill-level');
+  const percentageEl = document.getElementById('popup-percentage');
+
+  // Set skill name and level
+  skillNameEl.textContent = skillName;
+  percentageEl.textContent = '0%';  // reset counter
+
+  // Reset progress bar
+  progressFill.style.width = '0%';
+
+  // Show popup
+  popup.style.display = 'flex';
+
+  // Animate progress after slight delay
+  setTimeout(() => {
+    progressFill.style.width = proficiencyPercent + '%';
+    animatePercentage(percentageEl, proficiencyPercent);
+  }, 100);
+}
+
+function closeSkillPopup() {
+  const popup = document.getElementById('skill-popup');
+  const content = popup.querySelector('.popup-content');
+
+  // Add closing classes
+  popup.classList.add('closing');
+  content.classList.add('closing');
+
+  // Wait for animation to finish (300ms) before hiding and cleaning up
+  setTimeout(() => {
+    popup.style.display = 'none';
+    popup.classList.remove('closing');
+    content.classList.remove('closing');
+  }, 300);
+}
+
+// Close when clicking outside the popup box
+document.getElementById('skill-popup').addEventListener('click', closeSkillPopup);
+
+// Percentage count-up animation
+function animatePercentage(element, target) {
+  let current = 0;
+  const duration = 600; // ms total
+  const stepTime = Math.max(Math.floor(duration / target), 10);
+
+  const timer = setInterval(() => {
+    current++;
+    element.textContent = current + '%';
+    if (current >= target) {
+      clearInterval(timer);
+    }
+  }, stepTime);
+}

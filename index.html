@@ -55,83 +55,83 @@
       <h2>Skills</h2>
       <ul class="skills-grid">
 
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('Python', 95)">
           <i class="devicon-python-plain colored"></i>
           <span class="tooltip">Python</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('Java', 95)">
           <i class="devicon-java-plain colored"></i>
           <span class="tooltip">Java</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('C', 85)">
           <i class="devicon-c-plain colored"></i>
           <span class="tooltip">C</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('MySQL', 85)">
           <i class="devicon-mysql-plain colored"></i>
           <span class="tooltip">MySQL</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('OracleDB', 90)">
           <i class="devicon-oracle-original colored"></i>
           <span class="tooltip">Oracle</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('SQLite', 80)">
           <i class="devicon-sqlite-plain colored"></i>
           <span class="tooltip">SQLite</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('MongoDB', 65)">
           <i class="devicon-mongodb-plain colored"></i>
           <span class="tooltip">MongoDB</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('JSON', 70)">
           <i class="devicon-json-plain colored"></i>
           <span class="tooltip">JSON</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('PyTorch', 75)">
           <i class="devicon-pytorch-original colored"></i>
           <span class="tooltip">PyTorch</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('TensorFlow', 85)">
           <i class="devicon-tensorflow-original colored"></i>
           <span class="tooltip">TensorFlow</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('NumPy', 90)">
           <i class="devicon-numpy-plain colored"></i>
           <span class="tooltip">NumPy</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('Pandas', 90)">
           <i class="devicon-pandas-plain colored"></i>
           <span class="tooltip">Pandas</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('OpenCV', 75)">
           <i class="devicon-opencv-plain colored"></i>
           <span class="tooltip">OpenCV</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('Scikit-learn', 80)">
           <i class="devicon-scikitlearn-plain colored"></i>
           <span class="tooltip">Scikit-learn</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('Git', 75)">
           <i class="devicon-git-plain colored"></i>
           <span class="tooltip">Git</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('Docker', 50)">
           <i class="devicon-docker-plain colored"></i>
           <span class="tooltip">Docker</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('AWS', 80)">
           <i class="devicon-amazonwebservices-plain colored"></i>
           <span class="tooltip">AWS</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('HTML', 85)">
           <i class="devicon-html5-plain colored"></i>
           <span class="tooltip">HTML5</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('CSS', 75)">
           <i class="devicon-css3-plain colored"></i>
           <span class="tooltip">CSS3</span>
         </li>
-        <li class="skill-with-tooltip">
+        <li class="skill-with-tooltip" onclick="showSkillPopup('JavaScript', 60)">
           <i class="devicon-javascript-plain colored"></i>
           <span class="tooltip">JavaScript</span>
         </li>
@@ -139,6 +139,19 @@
       
     </div>
   </section>
+
+  <!-- new skill proficiency level popup -->
+  <div id="skill-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <span class="close-popup" onclick="closeSkillPopup()">&times;</span>
+      <h3 id="popup-skill-name">Skill Name</h3>
+      <div class="progress-bar">
+        <div id="popup-progress-fill" class="progress-fill"></div>
+      </div>
+      <p id="popup-skill-level">Proficiency: <span id="popup-percentage">0%</span></p>
+    </div>
+  </div>
+
 
 
   <section id="projects" class="section-70">
