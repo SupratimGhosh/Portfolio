@@ -281,7 +281,7 @@ function animatePercentage(element, target) {
 window.addEventListener('load', () => {
   const overlay = document.getElementById('greeting-overlay');
   const greetingText = document.getElementById('greeting-text');
-
+  document.getElementById('greeting-subtext').style.visibility = 'visible';
   const hasVisited = localStorage.getItem('hasVisited');
 
   if (hasVisited) {
