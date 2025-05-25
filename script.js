@@ -312,7 +312,31 @@ window.addEventListener('load', () => {
       setTimeout(() => {
         overlay.style.display = 'none';
       }, 800);
-    }, 1500);
+    }, 1000);
   }
 });
 //End of new greetings js
+
+//Scroll arrow
+window.addEventListener('DOMContentLoaded', () => {
+  const scrollArrow = document.getElementById('scroll-arrow');
+
+  // On arrow click → scroll to next section and hide arrow
+  scrollArrow.addEventListener('click', () => {
+    const nextSection = document.querySelector('section:nth-of-type(2)');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    scrollArrow.classList.add('hidden');
+  });
+
+  // On scroll → hide if scrolled down, show if back near top
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      scrollArrow.classList.add('hidden');
+    } else {
+      scrollArrow.classList.remove('hidden');
+    }
+  });
+});
+//End of scroll arrow js

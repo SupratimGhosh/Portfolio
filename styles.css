@@ -719,3 +719,29 @@ section {
   color: #ccc;
   margin-top: 0.5rem;
 }
+
+
+/* little arrow */
+/* Scroll arrow at bottom center */
+.scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.6); /* translucent white */
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  z-index: 999;
+  transition: opacity 0.4s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.scroll-arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
