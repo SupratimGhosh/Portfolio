@@ -673,3 +673,49 @@ section {
   from { transform: translateY(0); opacity: 1; }
   to { transform: translateY(30px); opacity: 0; }
 }
+
+
+/* new greetings css */
+/* Fullscreen greeting overlay */
+.greeting-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+  transition: opacity 0.8s ease;
+}
+
+.greeting-overlay h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: pulse 1.5s infinite;
+}
+
+.greeting-overlay p {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.greeting-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#greeting-subtext {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}

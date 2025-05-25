@@ -273,3 +273,46 @@ function animatePercentage(element, target) {
     }
   }, stepTime);
 }
+
+
+
+
+//New greetings js
+window.addEventListener('load', () => {
+  const overlay = document.getElementById('greeting-overlay');
+  const greetingText = document.getElementById('greeting-text');
+
+  const hasVisited = localStorage.getItem('hasVisited');
+
+  if (hasVisited) {
+    // Skip greeting if already visited
+    overlay.style.display = 'none';
+  } else {
+    // Get current hour
+    const now = new Date();
+    const hour = now.getHours();
+    let greeting = "Welcome!";
+
+    if (hour >= 5 && hour < 12) {
+      greeting = "☀️ Good morning!";
+    } else if (hour >= 12 && hour < 17) {
+      greeting = "🌤️ Good afternoon!";
+    } else if (hour >= 17 && hour < 21) {
+      greeting = "🌆 Good evening!";
+    } else {
+      greeting = "🌙 Good night!";
+    }
+
+    // Set greeting text
+    greetingText.textContent = `${greeting} 👋Welcome to My Portfolio!`;
+
+    // Wait 1 seconds, then fade out
+    setTimeout(() => {
+      overlay.classList.add('hidden');
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 800);
+    }, 1500);
+  }
+});
+//End of new greetings js
